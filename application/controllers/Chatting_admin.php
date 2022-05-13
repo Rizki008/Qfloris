@@ -36,7 +36,7 @@ class Chatting_admin extends CI_Controller
             'admin_send' => $this->input->post('pesan'),
             'pelanggan_send' => '0'
         );
-        $this->db->insert('tbl_chatting', $data);
+        $this->db->insert('chatting', $data);
         redirect('chatting_admin/pesan/' . $data['id_pelanggan']);
     }
 

@@ -27,7 +27,7 @@ class Chatting_pelanggan extends CI_Controller
                 'pelanggan_send' => $this->input->post('pesan'),
                 'admin_send' => '0'
             );
-            $this->db->insert('tbl_chatting', $data);
+            $this->db->insert('chatting', $data);
             redirect('chatting_pelanggan');
         }
     }
