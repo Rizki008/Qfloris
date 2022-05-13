@@ -61,7 +61,7 @@
                     <div class="media-body">
                         <h3 class="heading">Punya Pertanyaan?</h3>
                         <span>+62 813-1350-0038</span>
-                        <span>tokomutiara@gmail.com</span>
+                        <span>Qflorist@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
                 <span class="subheading">
                     Produk Terlaris
                 </span>
-                <h2>Toko Mutiara</h2>
+                <h2>Toko Qflorist</h2>
             </div>
         </div>
     </div>
@@ -140,8 +140,8 @@
         <div class="row justify-content-center mb-3 pb-3">
             <div class="col-md-12 heading-section text-center ftco-animate">
                 <span class="subheading">Produk Terbaru</span>
-                <h2 class="mb-4">Toko Mutiara</h2>
-                <p>Belanja Kebutuhan Rumah Tangga Hanya Di Toko Mutiara</p>
+                <h2 class="mb-4">Toko Qflorist</h2>
+                <p>Belanja Buket dan kado Di Toko Qflorist</p>
             </div>
         </div>
     </div>

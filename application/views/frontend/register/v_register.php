@@ -23,7 +23,7 @@
 <body class="hold-transition register-page">
     <div class="register-box">
         <div class="register-logo">
-            <a href="<?= base_url() ?>template/index2.html"><b>Toko</b>Mutiara</a>
+            <a href="<?= base_url() ?>template/index2.html"><b>Toko</b>Qflorist</a>
         </div>
 
         <div class="card">

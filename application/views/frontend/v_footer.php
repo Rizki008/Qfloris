@@ -16,8 +16,8 @@
 		<div class="row mb-5">
 			<div class="col-md">
 				<div class="ftco-footer-widget mb-4">
-					<h2 class="ftco-heading-2">Toko Mutuara</h2>
-					<p>toko mutiara berdiri sejak tahun 2011 kami menjual berbagai macam peralatan rumah tangga dan macam-macam sembako rumah tangga dan kebutuhan sehari-hari. Jika anda ingin berbelanja kebutuhan rumah tangga dan kebutuhan sehari-hari datang saja ke toko mutiara kami jamin pelayanan kami yang terbaik dan kualitas dari barang-barang yang kami jual sangat paling terbaik diantara yang lain.</p>
+					<h2 class="ftco-heading-2">Qflorist</h2>
+					<p>Qflorist merupakan sebuah toko penjualan buket dan kado</p>
 				</div>
 			</div>
 			<div class="col-md">
@@ -35,9 +35,9 @@
 					<h2 class="ftco-heading-2">Punya Pertanyaan?</h2>
 					<div class="block-23 mb-3">
 						<ul>
-							<li><span class="icon icon-map-marker"></span><span class="text">Jl. Raya Susukan, Mekarsari, Cipicung, Kabupaten Kuningan, Jawa Barat 45592</span></li>
+							<li><span class="icon icon-map-marker"></span><span class="text">Jl. Raya tebet jakarta barat</span></li>
 							<li><a href="#"><span class="icon icon-phone"></span><span class="text">+62 813-1350-0038</span></a></li>
-							<li><a href="#"><span class="icon icon-envelope"></span><span class="text">tokomutiara@gmail.com</span></a></li>
+							<li><a href="#"><span class="icon icon-envelope"></span><span class="text">Qflorist@gmail.com</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -48,9 +48,9 @@
 
 				<p>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>
+					<!-- Copyright &copy;<script>
 						document.write(new Date().getFullYear());
-					</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>
 			</div>

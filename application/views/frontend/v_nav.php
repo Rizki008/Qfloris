@@ -12,7 +12,7 @@ $daftar_chat = $this->m_chatting->daftar_chat();
             </div>
             <div class="col-md pr-4 d-flex topper align-items-center">
                 <div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                <span class="text">tokomutiara@gmail.com</span>
+                <span class="text">Qflorist@gmail.com</span>
             </div>
             <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
                 <span class="text">Buka Setiap Hari Dari Jam 08:00-20:00</span>
@@ -24,7 +24,7 @@ $daftar_chat = $this->m_chatting->daftar_chat();
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-section ftco-no-pt ftco-no-pb py-5 bg-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="<?= base_url() ?>">Toko Mutiara</a>
+        <a class="navbar-brand" href="<?= base_url() ?>">Qflorist</a>
 
         <div class="col-md-6 d-flex align-items-center">
             <form action="<?= base_url('pencarian') ?>" method="get" class="subscribe-form">

@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="#"><b>Toko</b>Mutiara</a>
+            <a href="#"><b>Toko</b>Qflorist</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
