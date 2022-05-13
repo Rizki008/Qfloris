@@ -12,7 +12,13 @@
 
 <section class="ftco-section">
     <div class="container">
-        <?php echo form_open('belanja/cekout');
+        <?php
+        //notifikasi form kosong
+        echo validation_errors('<div class="alert alert-warning alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h5><i class="icon fas fa-exclamation-triangle"></i>', '</h5></div>');
+
+        echo form_open('belanja/cekout');
         $no_order = date('Ymd') . strtoupper(random_string('alnum', 8)); ?>
         <div class="row justify-content-center">
             <div class="col-xl-7 ftco-animate">
@@ -50,7 +56,7 @@
                             <select name="id_lokasi" id="ongkir" class="form-control">
                                 <option value="">---Pilih Lokasi Anda---</option>
                                 <?php foreach ($lokasi as $key => $value) { ?>
-                                    <option value="<?= $value->id_lokasi ?>" data-ongkir=<?= $value->ongkir ?> data-total=<?= $this->cart->total() +  $value->ongkir ?>><?= $value->nama_lokasi ?></option>
+                                    <option value="<?= $value->id_lokasi ?>" data-ongkir=<?= $value->ongkir ?> data-total=<?= $this->cart->total() +  $value->ongkir ?>><?= $value->kelurahan ?></option>
                                 <?php } ?>
                             </select>
                         </div>
