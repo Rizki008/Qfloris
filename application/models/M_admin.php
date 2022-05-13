@@ -6,30 +6,30 @@ class M_admin extends CI_Model
 {
     public function total_produk()
     {
-        return $this->db->get('tbl_produk')->num_rows();
+        return $this->db->get('produk')->num_rows();
     }
 
     public function total_pesanan()
     {
         $this->db->where('status_order=0');
-        return $this->db->get('tbl_transaksi')->num_rows();
+        return $this->db->get('transaksi')->num_rows();
     }
 
     public function total_pelanggan()
     {
-        return $this->db->get('tbl_pelanggan')->num_rows();
+        return $this->db->get('pelanggan')->num_rows();
     }
 
     public function total_transaksi()
     {
         $this->db->where('status_order=3');
-        return $this->db->get('tbl_transaksi')->num_rows();
+        return $this->db->get('transaksi')->num_rows();
     }
 
     public function data_setting()
     {
         $this->db->select('*');
-        $this->db->from('tbl_setting');
+        $this->db->from('setting');
         $this->db->where('id', 1);
         return $this->db->get()->row();
     }
@@ -37,19 +37,19 @@ class M_admin extends CI_Model
     public function edit($data)
     {
         $this->db->where('id', $data['id']);
-        $this->db->update('tbl_setting', $data);
+        $this->db->update('setting', $data);
     }
 
     public function grafik()
     {
         $this->db->select('*');
-        return $this->db->get('tbl_transaksi')->result();
+        return $this->db->get('transaksi')->result();
     }
 
     public function data_grafik($data)
     {
         $this->db->select('*');
-        $this->db->from('tbl_transaksi');
+        $this->db->from('transaksi');
         $this->db->where($data);
         $this->db->group_by('produk');
         return $this->db->get()->result();
@@ -63,8 +63,8 @@ class M_admin extends CI_Model
     public function data_stock()
     {
         $this->db->select('*');
-        $this->db->from('tbl_produk');
-        $this->db->join('tbl_rinci_transaksi', 'tbl_produk.id_produk=tbl_rinci_transaksi.id_produk', 'left');
+        $this->db->from('produk');
+        $this->db->join('rinci_transaksi', 'produk.id_produk=rinci_transaksi.id_produk', 'left');
         $this->db->where('stock <=100');
         $this->db->order_by('stock', 'desc');
         return $this->db->get()->result();
@@ -73,7 +73,7 @@ class M_admin extends CI_Model
     public function status_transaksi()
     {
         $this->db->select('*');
-        $this->db->from('tbl_transaksi');
+        $this->db->from('transaksi');
         //$this->db->where('status_order=1');
         $this->db->where('status_order=1');
         $this->db->order_by('id_transaksi', 'desc');
@@ -83,7 +83,7 @@ class M_admin extends CI_Model
     public function status_transaksi_selesai()
     {
         $this->db->select('*');
-        $this->db->from('tbl_transaksi');
+        $this->db->from('transaksi');
         //$this->db->where('status_order=1');
         $this->db->where('status_order=3');
         $this->db->order_by('id_transaksi', 'desc');

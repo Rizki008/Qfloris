@@ -8,8 +8,8 @@ class M_produk extends CI_Model
     public function produk()
     {
         $this->db->select('*');
-        $this->db->from('tbl_produk');
-        $this->db->join('tbl_kategori', 'tbl_kategori.id_kategori = tbl_produk.id_kategori', 'left');
+        $this->db->from('produk');
+        $this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
         $this->db->order_by('id_produk', 'desc');
         return $this->db->get()->result();
     }
@@ -17,13 +17,13 @@ class M_produk extends CI_Model
     public function data_diskon()
     {
         $this->db->select_sum('qty');
-        $this->db->select('tbl_kategori.nama_kategori,tbl_produk.gambar, tbl_produk.nama_produk,tbl_produk.berat, tbl_produk.stock, tbl_produk.product_unit, tbl_produk.deskripsi, tbl_produk.harga, tbl_produk.diskon, tbl_produk.id_produk');
-        //$this->db->select('tbl_rinci_transaksi.qty');
-        $this->db->from('tbl_rinci_transaksi');
-        $this->db->join('tbl_produk', 'tbl_rinci_transaksi.id_produk = tbl_produk.id_produk', 'left');
-        $this->db->join('tbl_kategori', 'tbl_produk.id_kategori = tbl_kategori.id_kategori', 'left');
+        $this->db->select('kategori.nama_kategori,produk.gambar, produk.nama_produk,produk.berat, produk.stock, produk.product_unit, produk.deskripsi, produk.harga, produk.diskon, produk.id_produk');
+        //$this->db->select('rinci_transaksi.qty');
+        $this->db->from('rinci_transaksi');
+        $this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+        $this->db->join('kategori', 'produk.id_kategori = kategori.id_kategori', 'left');
 
-        $this->db->group_by('tbl_rinci_transaksi.id_produk');
+        $this->db->group_by('rinci_transaksi.id_produk');
         $this->db->order_by('qty', 'asc');
         return $this->db->get()->result();
     }
@@ -31,7 +31,7 @@ class M_produk extends CI_Model
     public function pencarian($keyword)
     {
         $this->db->select('*');
-        $this->db->from('tbl_produk');
+        $this->db->from('produk');
         $this->db->like('nama_produk', $keyword);
         $this->db->or_like('harga', $keyword);
         return $this->db->get()->result();
@@ -40,7 +40,7 @@ class M_produk extends CI_Model
     //diskon produk
     public function best_deal_product()
     {
-        $this->db->from('tbl_produk');
+        $this->db->from('produk');
         $this->db->where('is_available', 1);
         $this->db->order_by('diskon', 'desc');
         $this->db->limit(1);
@@ -51,7 +51,7 @@ class M_produk extends CI_Model
     public function diskon()
     {
         $this->db->select('*');
-        $this->db->from('tbl_produk');
+        $this->db->from('produk');
         $this->db->where('diskon>=1 and stock>=1');
         $this->db->order_by('id_produk', 'desc');
         return $this->db->get()->result();
@@ -61,25 +61,25 @@ class M_produk extends CI_Model
     public function best_deal_product_transaksi()
     {
         $this->db->select_sum('qty');
-        $this->db->select('tbl_produk.gambar, tbl_produk.nama_produk, tbl_produk.harga, tbl_produk.diskon, tbl_produk.id_produk');
-        $this->db->from('tbl_rinci_transaksi');
-        $this->db->join('tbl_produk', 'tbl_rinci_transaksi.id_produk = tbl_produk.id_produk', 'left');
-        $this->db->group_by('tbl_rinci_transaksi.id_produk');
+        $this->db->select('produk.gambar, produk.nama_produk, produk.harga, produk.diskon, produk.id_produk');
+        $this->db->from('rinci_transaksi');
+        $this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+        $this->db->group_by('rinci_transaksi.id_produk');
         $this->db->limit(4);
         return $this->db->get()->result();
     }
 
     public function related_products($current, $category)
     {
-        return $this->db->where(array('id_produk !=' => $current, 'id_kategori' => $category))->limit(4)->get('tbl_produk')->result();
+        return $this->db->where(array('id_produk !=' => $current, 'id_kategori' => $category))->limit(4)->get('produk')->result();
     }
 
     // List all your items
     public function detail($id_produk)
     {
         $this->db->select('*');
-        $this->db->from('tbl_produk');
-        $this->db->join('tbl_kategori', 'tbl_kategori.id_kategori = tbl_produk.id_kategori', 'left');
+        $this->db->from('produk');
+        $this->db->join('kategori', 'kategori.id_kategori = produk.id_kategori', 'left');
         $this->db->where('id_produk', $id_produk);
         return $this->db->get()->row();
     }
@@ -88,10 +88,10 @@ class M_produk extends CI_Model
     public function kurang_produk()
     {
         $this->db->select_sum('qty' <= 10);
-        $this->db->select('tbl_produk.gambar, tbl_produk.nama_produk, tbl_produk.harga, tbl_produk.diskon, tbl_produk.id_produk');
-        $this->db->from('tbl_rinci_transaksi');
-        $this->db->join('tbl_produk', 'tbl_rinci_transaksi.id_produk = tbl_produk.id_produk', 'left');
-        $this->db->group_by('tbl_rinci_transaksi.id_produk');
+        $this->db->select('produk.gambar, produk.nama_produk, produk.harga, produk.diskon, produk.id_produk');
+        $this->db->from('rinci_transaksi');
+        $this->db->join('produk', 'rinci_transaksi.id_produk = produk.id_produk', 'left');
+        $this->db->group_by('rinci_transaksi.id_produk');
         $this->db->limit(4);
         return $this->db->get()->result();
     }
@@ -99,21 +99,21 @@ class M_produk extends CI_Model
     // Add a new item
     public function add($data)
     {
-        $this->db->insert('tbl_produk', $data);
+        $this->db->insert('produk', $data);
     }
 
     //Update one item
     public function edit($data)
     {
         $this->db->where('id_produk', $data['id_produk']);
-        $this->db->update('tbl_produk', $data);
+        $this->db->update('produk', $data);
     }
 
     //Delete one item
     public function delete($data)
     {
         $this->db->where('id_produk', $data['id_produk']);
-        $this->db->delete('tbl_produk', $data);
+        $this->db->delete('produk', $data);
     }
 }
 
