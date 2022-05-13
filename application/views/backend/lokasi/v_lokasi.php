@@ -24,7 +24,9 @@
                 <thead class="text-center">
                     <tr>
                         <th>No</th>
-                        <th>Lokasi</th>
+                        <th>Kecamatan</th>
+                        <th>Kelurahan</th>
+                        <th>Kode Pos</th>
                         <th>Ongkir</th>
                         <th>Action</th>
                     </tr>
@@ -35,6 +37,8 @@
                         <tr class="text-center">
                             <td><?= $no++; ?></td>
                             <td><?= $value->nama_lokasi ?></td>
+                            <td><?= $value->kelurahan ?></td>
+                            <td><?= $value->kode_pos ?></td>
                             <td>Rp. <?= number_format($value->ongkir, 0) ?></td>
                             <td>
                                 <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#edit<?= $value->id_lokasi ?>"><i class="fa fa-edit"></i></button>

@@ -29,10 +29,14 @@ class Lokasi extends CI_Controller
     public function add()
     {
         $this->form_validation->set_rules('nama_lokasi', 'Nama Lokasi', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+        $this->form_validation->set_rules('kelurahan', 'Kelurahan', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+        $this->form_validation->set_rules('kode_pos', 'Kode Pos', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
         $this->form_validation->set_rules('ongkir', 'Ongkir', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
 
         $data = array(
             'nama_lokasi' => $this->input->post('nama_lokasi'),
+            'kelurahan' => $this->input->post('kelurahan'),
+            'kode_pos' => $this->input->post('kode_pos'),
             'ongkir' => $this->input->post('ongkir')
         );
         $this->m_lokasi->add($data);
@@ -45,6 +49,8 @@ class Lokasi extends CI_Controller
         $data = array(
             'id_lokasi' => $id_lokasi,
             'nama_lokasi' => $this->input->post('nama_lokasi'),
+            'kelurahan' => $this->input->post('kelurahan'),
+            'kode_pos' => $this->input->post('kode_pos'),
             'ongkir' => $this->input->post('ongkir')
         );
         $this->m_lokasi->edit($data);
