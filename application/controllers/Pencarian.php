@@ -18,8 +18,8 @@ class Pencarian extends CI_Controller
         $data = array(
             'keyword'    => $keyword,
             'pencarian' => $this->m_pencarian->ambil_data($keyword),
-            'isi'        => 'layout/frontend/pencarian/v_pencarian'
+            'isi'        => 'frontend/pencarian/v_pencarian'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 }

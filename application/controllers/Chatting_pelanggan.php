@@ -18,9 +18,9 @@ class Chatting_pelanggan extends CI_Controller
             $data = array(
                 'title' => 'Chatting',
                 'chat' => $this->m_chatting->select_chat(),
-                'isi' => 'layout/frontend/chatting/v_chatting'
+                'isi' => 'frontend/chatting/v_chatting'
             );
-            $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+            $this->load->view('frontend/v_wrapper', $data, FALSE);
         } else {
             $data = array(
                 'id_pelanggan' => $this->session->userdata('id_pelanggan'),

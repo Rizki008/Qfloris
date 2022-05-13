@@ -24,7 +24,7 @@ class Pelanggan extends CI_Controller
             'max_length' => '%s Maksimal 13 angka !!!'
         ));
         $this->form_validation->set_rules('jenis_kel', 'Jenis Kelamin', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
-        $this->form_validation->set_rules('email', 'Email Pelanggan', 'required|is_unique[tbl_pelanggan.email]', array(
+        $this->form_validation->set_rules('email', 'Email Pelanggan', 'required|is_unique[pelanggan.email]', array(
             'required' => '%s Mohon Untuk Diisi !!!',
             'is_unique' => '%s Email Sudah Terdaptar'
         ));
@@ -38,9 +38,9 @@ class Pelanggan extends CI_Controller
         if ($this->form_validation->run() == FALSE) {
             $data = array(
                 'title' => 'Regiseter Pelanggan',
-                'isi' => 'layout/frontend/register/v_register'
+                'isi' => 'frontend/register/v_register'
             );
-            $this->load->view('layout/frontend/register/v_register');
+            $this->load->view('frontend/register/v_register');
         } else {
             $data = array(
                 'nama_pelanggan' => $this->input->post('nama_pelanggan'),
@@ -71,9 +71,9 @@ class Pelanggan extends CI_Controller
         }
         $data = array(
             'title' => 'Login Pelanggan',
-            'isi' => 'layout/frontend/login/v_login_pelanggan'
+            'isi' => 'frontend/login/v_login_pelanggan'
         );
-        $this->load->view('layout/frontend/login/v_login_pelanggan', $data, FALSE);
+        $this->load->view('frontend/login/v_login_pelanggan', $data, FALSE);
     }
 
     public function logout()
@@ -87,22 +87,22 @@ class Pelanggan extends CI_Controller
         $this->pelanggan_login->proteksi_halaman();
         $data = array(
             'title' => 'Akun Saya',
-            'isi' => 'layout/frontend/login/v_akun'
+            'isi' => 'frontend/login/v_akun'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     //$this->pelanggan_login->proteksi_halaman();
     //$data = array(
     //'title' => 'Akun Saya',
-    // 'isi' => 'layout/frontend/login/v_edit'
+    // 'isi' => 'frontend/login/v_edit'
     //);
-    //$this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+    //$this->load->view('frontend/v_wrapper', $data, FALSE);
 
     public function edit($id_pelanggan = NULL)
     {
         $this->form_validation->set_rules('nama_pelanggan', 'Nama Pelanggan', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
-        $this->form_validation->set_rules('email', 'Email Pelanggan', 'required|is_unique[tbl_pelanggan.email]', array(
+        $this->form_validation->set_rules('email', 'Email Pelanggan', 'required|is_unique[pelanggan.email]', array(
             'required' => '%s Mohon Untuk Diisi !!!',
             'is_unique' => '$s Email Sudah Terdaptar'
         ));
@@ -121,9 +121,9 @@ class Pelanggan extends CI_Controller
                     'title' => 'Edit Profil',
                     'pelanggan' => $this->m_pelanggan->detail($id_pelanggan),
                     'error_upload' => $this->upload->display_errors(),
-                    'isi' => 'layout/frontend/login/v_edit'
+                    'isi' => 'frontend/login/v_edit'
                 );
-                $this->load->view('layout/frontend/login/v_edit');
+                $this->load->view('frontend/login/v_edit');
             } else {
                 //hapus gambar di folder
                 $pelanggan = $this->m_pelanggan->detail($id_pelanggan);
@@ -164,9 +164,9 @@ class Pelanggan extends CI_Controller
         $data = array(
             'title' => 'Edit pelanggan',
             'pelanggan' => $this->m_pelanggan->detail($id_pelanggan),
-            'isi' => 'layout/backend/pelanggan/v_edit'
+            'isi' => 'backend/pelanggan/v_edit'
         );
-        $this->load->view('layout/frontend/login/v_edit');
+        $this->load->view('frontend/login/v_edit');
     }
 }
 

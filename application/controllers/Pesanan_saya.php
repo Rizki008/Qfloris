@@ -23,9 +23,9 @@ class Pesanan_saya extends CI_Controller
             'selesai' => $this->m_transaksi->selesai(),
             'batalpesan' => $this->m_transaksi->batalpesan(),
             'rekening' => $this->m_transaksi->rekening(),
-            'isi' => 'layout/frontend/cart/v_pesanan_saya'
+            'isi' => 'frontend/cart/v_pesanan_saya'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     public function bayar($id_transaksi)
@@ -50,9 +50,9 @@ class Pesanan_saya extends CI_Controller
                     'pesanan' => $this->m_transaksi->detail_pesanan($id_transaksi),
                     'rekening' => $this->m_transaksi->rekening(),
                     'error_upload' => $this->upload->display_errors(),
-                    'isi' => 'layout/frontend/cart/v_bayar'
+                    'isi' => 'frontend/cart/v_bayar'
                 );
-                $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+                $this->load->view('frontend/v_wrapper', $data, FALSE);
             } else {
                 $upload_data = array('uploads' => $this->upload->data());
                 $config['image_library'] = 'gd2';
@@ -76,9 +76,9 @@ class Pesanan_saya extends CI_Controller
             'title' => 'Pembayaran',
             'pesanan' => $this->m_transaksi->detail_pesanan($id_transaksi),
             'rekening' => $this->m_transaksi->rekening(),
-            'isi' => 'layout/frontend/cart/v_bayar'
+            'isi' => 'frontend/cart/v_bayar'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     public function diterima($id_transaksi)
@@ -110,9 +110,9 @@ class Pesanan_saya extends CI_Controller
             'title' => 'Pesanan',
             'pesanan_detail' => $this->m_transaksi->pesanan_detail($no_order),
             'info' => $this->m_transaksi->info($no_order),
-            'isi' =>  'layout/frontend/cart/v_detail_pesanan'
+            'isi' =>  'frontend/cart/v_detail_pesanan'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     //pemesanan selesai deteail & review produk
@@ -125,9 +125,9 @@ class Pesanan_saya extends CI_Controller
             'title' => 'Pesanan',
             'pesanan_detail' => $this->m_transaksi->pesanan_detail($no_order),
             'info' => $this->m_transaksi->info($no_order),
-            'isi' =>  'layout/frontend/cart/v_detail_pesanan_selesai'
+            'isi' =>  'frontend/cart/v_detail_pesanan_selesai'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     public function insert_riview()

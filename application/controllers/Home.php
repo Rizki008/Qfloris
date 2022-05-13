@@ -24,7 +24,7 @@ class Home extends CI_Controller
             'best_deal_product_transaksi' => $this->m_produk->best_deal_product_transaksi(),
             'isi' => 'v_home'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     public function kategori($id_kategori)
@@ -33,9 +33,9 @@ class Home extends CI_Controller
         $data = array(
             'title' => $kategori->nama_kategori,
             'produk' => $this->m_home->produk_all($id_kategori),
-            'isi' => 'layout/frontend/kategori/v_kategori_produk'
+            'isi' => 'frontend/kategori/v_kategori_produk'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
 
@@ -48,8 +48,8 @@ class Home extends CI_Controller
             'produk' => $this->m_home->detail_produk($id_produk),
             'related_products' => $this->m_home->related_products($id_produk),
             'reviews' => $this->m_home->reviews($id_produk),
-            'isi' => 'layout/frontend/detail/v_detail_produk'
+            'isi' => 'frontend/detail/v_detail_produk'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 }
