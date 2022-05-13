@@ -19,9 +19,9 @@ class Belanja extends CI_Controller
         }
         $data = array(
             'title' => 'Produk',
-            'isi' => 'layout/frontend/cart/v_belanja'
+            'isi' => 'frontend/cart/v_belanja'
         );
-        $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+        $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
 
     public function add()
@@ -82,9 +82,9 @@ class Belanja extends CI_Controller
             $data = array(
                 'title' => 'Langsung Beli',
                 'lokasi' => $this->m_lokasi->lokasi(),
-                'isi' => 'layout/frontend/cart/v_cekouth'
+                'isi' => 'frontend/cart/v_cekouth'
             );
-            $this->load->view('layout/frontend/v_wrapper', $data, FALSE);
+            $this->load->view('frontend/v_wrapper', $data, FALSE);
         } else {
             //simpan ke tabel transaksi
             $data = array(
