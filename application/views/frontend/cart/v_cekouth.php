@@ -61,6 +61,13 @@
                             </select>
                         </div>
                     </div>
+                    <div class="w-100"></div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="streetaddress">Catatan</label>
+                            <input name="catatan" class="form-control" required>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-xl-5">
