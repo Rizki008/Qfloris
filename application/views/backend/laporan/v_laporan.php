@@ -155,14 +155,14 @@
     <!-- /.card -->
 </div>
 
-
+<!-- 
 <div class="col-md-12">
     <div class="card card-warning">
         <div class="card-header">
             <h3 class="card-title">Laporan stock Produk</h3>
-        </div>
-        <!-- /.card-header -->
-        <div class="card-body">
+        </div> -->
+<!-- /.card-header -->
+<!-- <div class="card-body">
             <?php
             echo form_open('laporan/lap_stock') ?>
             <div class="row">
@@ -216,8 +216,8 @@
             </div>
             <?php
             echo form_close() ?>
-        </div>
-        <!-- /.card-body -->
-    </div>
-    <!-- /.card -->
-</div>
+        </div> -->
+<!-- /.card-body -->
+<!-- </div> -->
+<!-- /.card -->
+<!-- </div> -->
