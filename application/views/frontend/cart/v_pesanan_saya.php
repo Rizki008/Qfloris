@@ -53,8 +53,8 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Expedisi</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Harga Produk</th>
+                                            <th>Total Bayar</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -92,7 +92,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Total Bayar</th>
                                             <th>Total Bayar</th>
                                         </tr>
                                     </thead>
@@ -120,7 +120,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Total Bayar</th>
                                             <th>Status</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -151,7 +151,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Total Bayar</th>
                                             <th>Status</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -180,7 +180,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Total Bayar</th>
                                             <th>Catatan</th>
                                             <th>Total Bayar</th>
                                         </tr>
