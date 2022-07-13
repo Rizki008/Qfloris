@@ -1,4 +1,3 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('template4/images/bg_1.jpg') ?>');">
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
@@ -16,7 +15,7 @@
 
 				<!-- Main content -->
 				<div class="invoice p-3 mb-3">
-					<h3 class="text-center">Review Produk</h3><br><br>
+					<h3 class="text-center">Ulasan Produk</h3><br><br>
 					<!-- title row -->
 					<div class="row">
 						<?php foreach ($info as $key => $value) { ?>
@@ -65,7 +64,7 @@
 									<th>Nama Produk</th>
 									<th>Harga</th>
 									<th></th>
-									<th>Rivew</th>
+									<th>Ulasan</th>
 									<th></th>
 								</tr>
 							</thead>
@@ -78,7 +77,7 @@
 										<td><?= $value->nama_produk ?></td>
 										<td><?= $value->harga - $value->diskon ?></td>
 										<td><input name="id_produk" class="form-control" cols="30" rows="10" placeholder="isi Produk" value="<?= $value->id_produk ?>" required hidden></input></td>
-										<td><input name="isi" class="form-control" cols="30" rows="10" placeholder="isi Riview" required></input></td>
+										<td><input name="isi" class="form-control" cols="30" rows="10" placeholder="ketik ulasan" required></input></td>
 										<td><button type="submit" class="btn btn-primary btn-block">Simpan</button></td>
 									</tr>
 									<?php echo form_close() ?>

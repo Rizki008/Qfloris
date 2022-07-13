@@ -69,7 +69,7 @@ $daftar_chat = $this->m_chatting->daftar_chat();
                     <?php } else { ?>
                         <a href="#" class="nav-link dropdown-toggle" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?= $this->session->userdata('nama_pelanggan'); ?></a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <!--<a class="dropdown-item" href="<?= base_url('pelanggan/akun') ?>">Akun Saya</a>-->
+                            <a class="dropdown-item" href="<?= base_url('pelanggan/akun') ?>">Akun Saya</a>
                             <a class="dropdown-item" href="<?= base_url('chatting_pelanggan') ?>">Chatting
                                 <span class="icon-envelope"></span>[<?= $jml_chatting ?>]
                             </a>

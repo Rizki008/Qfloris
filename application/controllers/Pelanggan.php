@@ -87,17 +87,11 @@ class Pelanggan extends CI_Controller
         $this->pelanggan_login->proteksi_halaman();
         $data = array(
             'title' => 'Akun Saya',
+            'profil' => $this->m_pelanggan->profil(),
             'isi' => 'frontend/login/v_akun'
         );
         $this->load->view('frontend/v_wrapper', $data, FALSE);
     }
-
-    //$this->pelanggan_login->proteksi_halaman();
-    //$data = array(
-    //'title' => 'Akun Saya',
-    // 'isi' => 'frontend/login/v_edit'
-    //);
-    //$this->load->view('frontend/v_wrapper', $data, FALSE);
 
     public function edit($id_pelanggan = NULL)
     {
@@ -167,6 +161,23 @@ class Pelanggan extends CI_Controller
             'isi' => 'backend/pelanggan/v_edit'
         );
         $this->load->view('frontend/login/v_edit');
+    }
+
+    public function riset($id_pelanggan = NULL)
+    {
+        $this->form_validation->set_rules('password', 'Password Pelanggan', 'required', array('required' => '%s Mohon Untuk Diisi !!!'));
+        $this->form_validation->set_rules('ulangi_password', 'Ulangi Password Pelanggan', 'required|matches[password]', array(
+            'required' => '%s Mohon Untuk Diisi !!!',
+            'matches' => '%s Password Tidak Sama !!!'
+        ));
+
+        $data = array(
+            'id_pelanggan' => $id_pelanggan,
+            'password' => $this->input->post('password'),
+        );
+        $this->m_pelanggan->edit($data);
+        $this->session->set_flashdata('pesan', 'Riset Password Berhasil, Silahkan Untuk Login!!!');
+        redirect('pelanggan/login');
     }
 }
 

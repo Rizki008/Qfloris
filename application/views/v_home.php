@@ -5,18 +5,15 @@
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
                         <div class="col-md-12 ftco-animate text-center">
-                            <h1 class="mb-2">Produk Unggulan Ditoko Kami </h1>
-                            <h2 class="subheading mb-4">&amp; Kami Menyediakan Produk-Produk Terbaru</h2>
-                            <p><a href="#" class="btn btn-primary">View Details</a></p>
+                            <h1 class="mb-2">Selamat datang di Qflorist</h1>
+                            <h2 class="subheading mb-4">&amp; Temukan Buket Terbaikmu Disini</h2>
                         </div>
                     </div>
                 </div>
             </div>
         <?php } ?>
 </section>
-
 <section class="ftco-section">
     <div class="container">
         <div class="row no-gutters ftco-services">
@@ -26,7 +23,7 @@
                         <span class="flaticon-shipped"></span>
                     </div>
                     <div class="media-body">
-                        <h3 class="heading">3 Jasa Pengiriman</h3>
+                        <h3 class="heading">Pengiriman</h3>
                         <span>Pengiriman Ke Berbagai Daerah</span>
                     </div>
                 </div>
@@ -68,72 +65,6 @@
         </div>
     </div>
 </section>
-
-
-<section class="ftco-section">
-    <div class="container">
-        <div class="row justify-content-center mb-3 pb-3">
-            <div class="col-md-12 heading-section text-center ftco-animate">
-                <span class="subheading">
-                    Produk Terlaris
-                </span>
-                <h2>Toko Qflorist</h2>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <?php if (count($best_deal_product_transaksi) > 0) : ?>
-                <?php foreach ($best_deal_product_transaksi as $key => $value) { ?>
-                    <div class="col-md-6 col-lg-3 ftco-animate">
-                        <?php echo form_open('belanja/add');
-                        echo form_hidden('id', $value->id_produk);
-                        echo form_hidden('qty', 1);
-                        echo form_hidden('price', $value->harga - $value->diskon);
-                        echo form_hidden('name', $value->nama_produk);
-                        echo form_hidden('redirect_page', str_replace('index.php/', '', current_url()));
-                        ?>
-                        <div class="product">
-                            <a href="<?= base_url('belanja/add/' . $value->id_produk); ?>" class="img-prod"><img class="img-fluid" src="<?= base_url('assets/gambar/' . $value->gambar) ?>" alt="Colorlib Template">
-                                <?php if ($value->diskon > 0) : ?>
-                                    <span class="status"><?= count_percent_discount($value->diskon, $value->harga, 0);  ?>%</span>
-                                <?php endif; ?>
-                                <div class="overlay"></div>
-                            </a>
-                            <div class="text py-3 pb-4 px-3 text-center">
-                                <h3><a href="<?= base_url('belanja/add/' . $value->id_produk); ?>"><?= $value->nama_produk ?></a></h3>
-                                <div class="d-flex">
-                                    <div class="pricing">
-                                        <p class="price"><?php if ($value->diskon > 0) : ?>
-                                                <span class="mr-2 price-dc">Rp. <?= format_rupiah($value->harga, 0); ?></span><span class="price-sale">Rp. <?= format_rupiah($value->harga - $value->diskon, 0); ?></span>
-                                            <?php else : ?>
-                                                <span class="mr-2"><span class="price-sale">Rp. <?= format_rupiah($value->harga - $value->diskon, 0); ?></span>
-                                                <?php endif; ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="bottom-area d-flex px-3">
-                                    <div class="m-auto d-flex">
-                                        <a href="<?= base_url('home/detail_produk/' . $value->id_produk) ?>" class="buy-now d-flex justify-content-center align-items-center text-center">
-                                            <span><i class="ion-ios-menu"></i></span>
-                                        </a>
-                                        <!--<button type="submit" class="btn btn-primary mx-1" data-name="<?= $value->nama_produk; ?>" data-price="<?= ($value->diskon > 0) ? ($value->harga - $value->diskon) : $value->harga ?>" data-id="<?= $value->id_produk; ?>">
-                                            <span><i class="ion-ios-cart"></i></span>
-                                        </button>-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <?php echo form_close(); ?>
-                    </div>
-                <?php } ?>
-            <?php else : ?>
-            <?php endif; ?>
-        </div>
-    </div>
-</section>
-
-
 
 <section class="ftco-section">
     <div class="container">
@@ -203,35 +134,11 @@
         </div>
     </div>
 </section>
-
-<section class="ftco-section img" style="background-image: url(<?= base_url('assets/gambar/' . $best_deal_product->gambar) ?>);">
-    <div class="container">
-        <div class="row justify-content-end">
-            <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-                <h3>Harga Termurah</h3>
-                <h2 class="mb-4">Promo Terbaru</h2>
-                <h3><a href=""><?= $best_deal_product->nama_produk ?></a></h3>
-
-                <span class="price">Rp. <?= format_rupiah($best_deal_product->harga) ?> <a href="">sekarang hanya Rp <?= format_rupiah($best_deal_product->harga - $best_deal_product->diskon); ?></a> </span>
-                <div id="timer" class="d-flex mt-5">
-                    <div class="time pl-3">
-                        <a href="#" class="btn btn-primary add-cart" data-name="<?= $best_deal_product->nama_produk; ?>" data-price="<?= ($best_deal_product->diskon > 0) ? ($best_deal_product->harga - $best_deal_product->diskon) : $best_deal_product->harga; ?>" data-id="<?= $best_deal_product->id_produk; ?>"><i class="ion-ios-cart"></i></a>
-                    </div>
-                    <div class="time pl-3">
-                        <a class="btn btn-info" href="<?= site_url('home/detail_produk/' . $best_deal_product->id_produk); ?>" class="buy-now d-flex justify-content-center align-items-center text-center">
-                            <span><i class="ion-ios-menu text-white"></i></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
-
 <section class="ftco-section testimony-section">
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-                <h2 class="mb-4">Diskon</h2>
+                <h2 class="mb-4">PROMO BULAN JULI</h2>
                 <span class="subheading">Produk Dengan Harga Termurah</span>
             </div>
         </div>

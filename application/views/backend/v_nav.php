@@ -46,7 +46,7 @@ $total_pesanan = $this->m_admin->total_pesanan();
 					<a class="nav-link">
 						<i class="nav-icon fas fa-box"></i>
 						<p>
-							Produk
+							Data Produk
 							<i class="right fas fa-angle-left"></i>
 						</p>
 					</a>
@@ -106,7 +106,7 @@ $total_pesanan = $this->m_admin->total_pesanan();
 																						} ?>">
 						<i class="nav-icon fas fa-money-check-alt"></i>
 						<p>
-							Transaksi
+							Data Pesanan
 							<span class="badge badge-info right"><?= $total_pesanan ?></span>
 						</p>
 					</a>
@@ -159,7 +159,7 @@ $total_pesanan = $this->m_admin->total_pesanan();
 																		} ?>">
 						<i class="nav-icon fas fa-th"></i>
 						<p>
-							Data Lokasi
+							Data Ongkir
 						</p>
 					</a>
 				</li>

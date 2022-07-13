@@ -1,14 +1,11 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('template4/images/bg_1.jpg') ?>');">
+
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Toko</a></span> <span>Qflorist</span></p>
                 <h1 class="mb-0 bread"><?= $title ?></h1>
-            </div>
         </div>
     </div>
 </div>
-
 <section class="ftco-section">
     <div class="container">
         <div class="row">
@@ -53,8 +50,8 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Expedisi</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Ongkir</th>
+                                            <th>Total Bayar</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -92,7 +89,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>ongkir</th>
                                             <th>Total Bayar</th>
                                         </tr>
                                     </thead>
@@ -120,7 +117,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Ongkir</th>
                                             <th>Status</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -151,7 +148,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Ongkir</th>
                                             <th>Status</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -180,7 +177,7 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
-                                            <th>Biaya Ongkir</th>
+                                            <th>Ongkir</th>
                                             <th>Catatan</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -240,7 +237,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Pesanan Dibatlkan</h4>
+                            <h4 class="modal-title">Pesanan Dibatalkan</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
