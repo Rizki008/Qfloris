@@ -10,7 +10,11 @@ scratch. This page gets rid of all links and provides the needed markup only.-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
+<<<<<<< HEAD
   <title>Qflorist | <?= $title ?></title>
+=======
+  <title>Toko Mutiara | <?= $title ?></title>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="<?= base_url() ?>template/plugins/fontawesome-free/css/all.min.css">

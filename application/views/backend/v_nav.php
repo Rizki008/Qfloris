@@ -106,7 +106,11 @@ $total_pesanan = $this->m_admin->total_pesanan();
 																						} ?>">
 						<i class="nav-icon fas fa-money-check-alt"></i>
 						<p>
+<<<<<<< HEAD
 							Data Pesanan
+=======
+							Pesanan
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
 							<span class="badge badge-info right"><?= $total_pesanan ?></span>
 						</p>
 					</a>

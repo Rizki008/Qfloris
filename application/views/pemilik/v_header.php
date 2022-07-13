@@ -13,7 +13,11 @@ $jumlah = $this->m_dashboard->hitungJumlahAsset();
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
+<<<<<<< HEAD
                     <a href="<?= base_url('Pemilik') ?>" class="nav-link">Home</a>
+=======
+                    <a href="<?= base_url('admin') ?>" class="nav-link">Home</a>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                 </li>
             </ul>
 

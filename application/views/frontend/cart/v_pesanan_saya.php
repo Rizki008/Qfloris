@@ -50,7 +50,11 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
+<<<<<<< HEAD
                                             <th>Ongkir</th>
+=======
+                                            <th>Harga Produk</th>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                                             <th>Total Bayar</th>
                                             <th>Action</th>
                                         </tr>
@@ -89,7 +93,11 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
+<<<<<<< HEAD
                                             <th>ongkir</th>
+=======
+                                            <th>Total Bayar</th>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                                             <th>Total Bayar</th>
                                         </tr>
                                     </thead>
@@ -117,7 +125,11 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
+<<<<<<< HEAD
                                             <th>Ongkir</th>
+=======
+                                            <th>Total Bayar</th>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                                             <th>Status</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -148,7 +160,11 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
+<<<<<<< HEAD
                                             <th>Ongkir</th>
+=======
+                                            <th>Total Bayar</th>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                                             <th>Status</th>
                                             <th>Total Bayar</th>
                                         </tr>
@@ -177,7 +193,11 @@
                                         <tr>
                                             <th>No Order</th>
                                             <th>Tanggal Order</th>
+<<<<<<< HEAD
                                             <th>Ongkir</th>
+=======
+                                            <th>Total Bayar</th>
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                                             <th>Catatan</th>
                                             <th>Total Bayar</th>
                                         </tr>

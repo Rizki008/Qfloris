@@ -123,6 +123,10 @@
                             <th>No Order</th>
                             <th>Nama Pelanggan</th>
                             <th>Status</th>
+<<<<<<< HEAD
+=======
+                            <!-- <th>Expedisi</th> -->
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                         </tr>
                     </thead>
                     <tbody>
@@ -134,6 +138,14 @@
                                     <span class="badge badge-success">Dikemas</span><br>
                                     <span class="badge badge-primary">Menunggu Dikirim</span>
                                 </td>
+<<<<<<< HEAD
+=======
+                                <!-- <td>
+                                    <div class="sparkbar" data-color="#00a65a" data-height="20"><b><?= $value->expedisi ?></b><br>
+                                        Paket : <?= $value->paket ?><br>
+                                        Ongkir : Rp. <?= number_format($value->ongkir, 0) ?></div>
+                                </td> -->
+>>>>>>> f3588e506f06790baa718e84a4a54268c6d06ad3
                             </tr>
                         <?php } ?>
                     </tbody>
